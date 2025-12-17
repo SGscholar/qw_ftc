@@ -1,1 +1,57 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quantum Warriors</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: lightblue;
+      font-family: "Courier New", monospace;
+    }
+
+    #typing {
+      font-size: 3rem;
+      font-weight: bold;
+      white-space: nowrap;
+      border-right: 3px solid black;
+      padding-right: 6px;
+      animation: blink 0.8s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="typing"></div>
+
+  <script>
+    const text = "Quantum Warriors";
+    const typingElement = document.getElementById("typing");
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 120);
+      }
+    }
+
+    type();
+  </script>
+
+</body>
+</html>
