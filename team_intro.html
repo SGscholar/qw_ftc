@@ -1,49 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Infinite Scroll List</title>
-
+<meta charset="UTF-8">
+<title>Team Scroll</title>
 <style>
-  
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background-color: lightblue;
+        overflow: hidden;
+    }
 
+    .scroll-container {
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
+    .member {
+        height: 100vh;
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid rgba(0,0,0,0.2);
+    }
+
+    .photo {
+        width: 200px;
+        height: 200px;
+        background-color: #ffffff;
+        border: 2px dashed #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        color: #555;
+        font-size: 14px;
+    }
+
+    .name {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        width: 60%;
+        text-align: center;
+        font-size: 18px;
+    }
 </style>
 </head>
-
 <body>
-  <div class="container">
-    <div class="entry"><div class="image-placeholder"></div><div class="text">A</div></div>
-    <hr>
-    <br>
-    <div class="entry"><div class="image-placeholder"></div><div class="text">BA</div></div>
-    <hr>
-    <br>
-    <div class="entry"><div class="image-placeholder"></div><div class="text">VB</div></div>
-    <hr>
-    <br>
-    <div class="entry"><div class="image-placeholder"></div><div class="text">S D</div></div>
-    <hr>
-    <br>
-    <div class="entry"><div class="image-placeholder"></div><div class="text">Si D</div></div>
-    <hr>
-    <br>
-    <div class="entry"><div class="image-placeholder"></div><div class="text">A D</div></div>
-    <hr>
-    <br>
-    <div class="entry"><div class="image-placeholder"></div><div class="text">A G</div></div>
-    <hr>
-    <br>
-    <div class="entry"><div class="image-placeholder"></div><div class="text">S K</div></div>
-    <hr>
-    <br>
-    <div class="entry"><div class="image-placeholder"></div><div class="text">J K</div></div>
-    <hr>
-    <br>
-    <div class="entry"><div class="image-placeholder"></div><div class="text">S G</div></div>
-    <hr>
-    <br>
-  </div>
+
+<div class="scroll-container">
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">A</div>
+        <div class="description">Team member A description goes here.</div>
+    </div>
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">BA</div>
+        <div class="description">Team member BA description goes here.</div>
+    </div>
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">VB</div>
+        <div class="description">Team member VB description goes here.</div>
+    </div>
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">S D</div>
+        <div class="description">Team member S D description goes here.</div>
+    </div>
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">Si D</div>
+        <div class="description">Team member Si D description goes here.</div>
+    </div>
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">A D</div>
+        <div class="description">Team member A D description goes here.</div>
+    </div>
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">A G</div>
+        <div class="description">Team member A G description goes here.</div>
+    </div>
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">S K</div>
+        <div class="description">Team member S K description goes here.</div>
+    </div>
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">J K</div>
+        <div class="description">Team member J K description goes here.</div>
+    </div>
+
+    <div class="member">
+        <div class="photo">Picture Here</div>
+        <div class="name">S G</div>
+        <div class="description">Team member S G description goes here.</div>
+    </div>
+
+</div>
+
 </body>
 </html>
-
