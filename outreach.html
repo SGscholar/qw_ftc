@@ -1,4 +1,4 @@
-t<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,6 +13,7 @@ html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     height: 100%;
+    color: #111; /* darker text for readability */
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -54,9 +55,36 @@ nav a {
     box-sizing: border-box;
 }
 
-.intro-section h1 {
+/* Typing animation */
+h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #111;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #111;
+    width: 12ch; /* approximate length of word */
+    animation: typing 2s steps(12), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 12ch }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* Fade-in for paragraphs after typing */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 2.5s; /* delay after typing finishes */
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
 
 .intro-section p {
@@ -119,13 +147,13 @@ td {
 <section class="intro-section">
     <div>
         <h1>Outreach</h1>
-        <p>
+        <p class="fade-in">
             We as a team have gained over <strong>200+ hours of outreach</strong> through hosting information
             sessions, workshops, Intro To Robotics meetings, and mock tournaments for FLL.
             We also donated old FLL boards to new teams in our community and helped create
             new teams through these meetings and the support of our coaches.
         </p>
-        <p>
+        <p class="fade-in">
             Our team always strives to help others access this wonderful program, and we
             look forward to doing so every season.
         </p>
