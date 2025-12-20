@@ -53,6 +53,8 @@ nav a {
     text-align: center;
     padding: 0 10%;
     box-sizing: border-box;
+    flex-direction: column;
+    position: relative;
 }
 
 /* Typing animation */
@@ -84,6 +86,23 @@ h1 {
 }
 
 @keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Bottom hint text */
+.bottom-text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #111;
+    opacity: 0;
+    animation: fadeBottom 2s forwards;
+    animation-delay: 4.5s; /* after typing + fade-in paragraphs */
+}
+
+@keyframes fadeBottom {
     to { opacity: 1; }
 }
 
@@ -145,19 +164,18 @@ td {
 
 <!-- Centered Intro Section -->
 <section class="intro-section">
-    <div>
-        <h1>Outreach</h1>
-        <p class="fade-in">
-            We as a team have gained over <strong>200+ hours of outreach</strong> through hosting information
-            sessions, workshops, Intro To Robotics meetings, and mock tournaments for FLL.
-            We also donated old FLL boards to new teams in our community and helped create
-            new teams through these meetings and the support of our coaches.
-        </p>
-        <p class="fade-in">
-            Our team always strives to help others access this wonderful program, and we
-            look forward to doing so every season.
-        </p>
-    </div>
+    <h1>Outreach</h1>
+    <p class="fade-in">
+        We as a team have gained over <strong>200+ hours of outreach</strong> through hosting information
+        sessions, workshops, Intro To Robotics meetings, and mock tournaments for FLL.
+        We also donated old FLL boards to new teams in our community and helped create
+        new teams through these meetings and the support of our coaches.
+    </p>
+    <p class="fade-in">
+        Our team always strives to help others access this wonderful program, and we
+        look forward to doing so every season.
+    </p>
+    <div class="bottom-text">Full details below</div>
 </section>
 
 <!-- Table Section -->
