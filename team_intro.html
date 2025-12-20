@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Team</title>
+<title>Meet The Team</title>
 
 <style>
 html, body {
@@ -11,7 +11,14 @@ html, body {
     font-family: Arial, sans-serif;
     background-color: lightblue;
     scroll-behavior: smooth;
-    overflow-x: hidden;   /* kills side scrollbar */
+    overflow-x: hidden;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* Header */
@@ -20,7 +27,7 @@ header {
     top: 0;
     width: 100%;
     height: 70px;
-    background-color: darkblue;
+    background: rgba(255,255,255,0.85);
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
@@ -36,13 +43,44 @@ nav a {
     font-weight: bold;
 }
 
-/* Content wrapper */
-.main {
-    padding-top: 70px;
-    overflow: visible;   /* ensure only body scrolls */
+/* Hero section */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Sections */
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay h1 {
+    color: white;
+    font-size: 64px;
+    letter-spacing: 2px;
+}
+
+/* Main content */
+.main {
+    padding-top: 70px;
+}
+
+/* Team sections */
 .section {
     min-height: calc(100vh - 70px);
     display: flex;
@@ -71,7 +109,6 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
 }
 
 .text-box {
@@ -102,57 +139,28 @@ nav a {
     </nav>
 </header>
 
+<!-- Hero -->
+<section class="hero">
+    <video autoplay muted loop playsinline>
+        <source src="your-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+        <h1>Meet The Team</h1>
+    </div>
+</section>
+
 <div class="main">
 
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">A</div><div class="description">Description for A.</div></div>
-    </section>
-
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">BA</div><div class="description">Description for BA.</div></div>
-    </section>
-
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">VB</div><div class="description">Description for VB.</div></div>
-    </section>
-
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">S D</div><div class="description">Description for S D.</div></div>
-    </section>
-
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">Si D</div><div class="description">Description for Si D.</div></div>
-    </section>
-
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">A D</div><div class="description">Description for A D.</div></div>
-    </section>
-
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">A G</div><div class="description">Description for A G.</div></div>
-    </section>
-
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">S K</div><div class="description">Description for S K.</div></div>
-    </section>
-
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">J K</div><div class="description">Description for J K.</div></div>
-    </section>
-
-    <section class="section">
-        <div class="image-box">Picture</div>
-        <div class="text-box"><div class="name">S G</div><div class="description">Description for S G.</div></div>
-    </section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">A</div><div class="description">Description for A.</div></div></section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">BA</div><div class="description">Description for BA.</div></div></section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">VB</div><div class="description">Description for VB.</div></div></section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">S D</div><div class="description">Description for S D.</div></div></section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">Si D</div><div class="description">Description for Si D.</div></div></section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">A D</div><div class="description">Description for A D.</div></div></section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">A G</div><div class="description">Description for A G.</div></div></section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">S K</div><div class="description">Description for S K.</div></div></section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">J K</div><div class="description">Description for J K.</div></div></section>
+    <section class="section"><div class="image-box">Picture</div><div class="text-box"><div class="name">S G</div><div class="description">Description for S G.</div></div></section>
 
 </div>
 
