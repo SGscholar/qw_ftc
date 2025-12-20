@@ -2,122 +2,125 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Team Scroll</title>
+<title>Team Members</title>
+
 <style>
     html, body {
         margin: 0;
         padding: 0;
         height: 100%;
-        font-family: Arial, sans-serif;
         background-color: lightblue;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
         overflow: hidden;
     }
 
-    .scroll-container {
+    .container {
         height: 100vh;
-        overflow-y: scroll;
+        overflow-y: auto;
         scroll-snap-type: y mandatory;
     }
 
-    .member {
+    .page {
         height: 100vh;
         scroll-snap-align: start;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-bottom: 2px solid rgba(0,0,0,0.2);
     }
 
-    .photo {
-        width: 200px;
-        height: 200px;
-        background-color: #ffffff;
-        border: 2px dashed #333;
+    .image-box {
+        width: 220px;
+        height: 220px;
+        background: white;
+        border: 2px dashed #000;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
-        color: #555;
         font-size: 14px;
     }
 
     .name {
-        font-size: 36px;
+        font-size: 40px;
         font-weight: bold;
         margin-bottom: 10px;
     }
 
     .description {
-        width: 60%;
+        max-width: 600px;
         text-align: center;
         font-size: 18px;
     }
 </style>
 </head>
+
 <body>
 
-<div class="scroll-container">
+<div class="container">
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">A</div>
-        <div class="description">Team member A description goes here.</div>
-    </div>
+        <div class="description">Description for A.</div>
+    </section>
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">BA</div>
-        <div class="description">Team member BA description goes here.</div>
-    </div>
+        <div class="description">Description for BA.</div>
+    </section>
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">VB</div>
-        <div class="description">Team member VB description goes here.</div>
-    </div>
+        <div class="description">Description for VB.</div>
+    </section>
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">S D</div>
-        <div class="description">Team member S D description goes here.</div>
-    </div>
+        <div class="description">Description for S D.</div>
+    </section>
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">Si D</div>
-        <div class="description">Team member Si D description goes here.</div>
-    </div>
+        <div class="description">Description for Si D.</div>
+    </section>
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">A D</div>
-        <div class="description">Team member A D description goes here.</div>
-    </div>
+        <div class="description">Description for A D.</div>
+    </section>
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">A G</div>
-        <div class="description">Team member A G description goes here.</div>
-    </div>
+        <div class="description">Description for A G.</div>
+    </section>
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">S K</div>
-        <div class="description">Team member S K description goes here.</div>
-    </div>
+        <div class="description">Description for S K.</div>
+    </section>
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">J K</div>
-        <div class="description">Team member J K description goes here.</div>
-    </div>
+        <div class="description">Description for J K.</div>
+    </section>
 
-    <div class="member">
-        <div class="photo">Picture Here</div>
+    <section class="page">
+        <div class="image-box">Picture</div>
         <div class="name">S G</div>
-        <div class="description">Team member S G description goes here.</div>
-    </div>
+        <div class="description">Description for S G.</div>
+    </section>
 
 </div>
 
