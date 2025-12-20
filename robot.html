@@ -16,9 +16,7 @@ html, body {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-body::-webkit-scrollbar {
-    display: none;
-}
+body::-webkit-scrollbar { display: none; }
 
 /* Header */
 header {
@@ -34,7 +32,6 @@ header {
     z-index: 1000;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
-
 nav a {
     margin: 0 20px;
     text-decoration: none;
@@ -42,13 +39,12 @@ nav a {
     font-weight: bold;
 }
 
-/* Hero video section */
+/* Hero video */
 .hero {
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
-
 .hero video {
     position: absolute;
     top: 50%;
@@ -59,7 +55,6 @@ nav a {
     object-fit: cover;
     pointer-events: none;
 }
-
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -68,74 +63,48 @@ nav a {
     justify-content: center;
     align-items: center;
 }
-
 .hero-overlay h1 {
     color: white;
     font-size: 64px;
-    letter-spacing: 2px;
     text-align: center;
-    padding: 0 20px;
 }
 
-/* Main content */
-.main {
-    padding-top: 80px;
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-bottom: 80px;
+/* Section styling */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    gap: 40px;
+    flex-wrap: wrap;
 }
-
-/* Headings */
-h1, h2, h3 {
-    margin-bottom: 16px;
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-size: 32px;
-    margin-top: 40px;
-}
-
-h3 {
-    font-size: 24px;
-    margin-top: 30px;
-}
-
-/* Paragraphs */
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 16px;
-}
-
-/* Lists */
-ul, ol {
-    margin-left: 20px;
-    margin-bottom: 16px;
-}
+.section:nth-child(even) { flex-direction: row-reverse; }
+.section img, .section .text { max-width: 45%; }
+.section .text h2 { font-size: 32px; margin-bottom: 16px; }
+.section .text p, .section .text ul { font-size: 16px; line-height: 1.6; margin-bottom: 16px; }
 
 /* Image placeholders */
 .image-box {
-    width: 320px;
-    height: 180px;
+    width: 100%;
+    height: 200px;
     background: white;
     border: 2px dashed rgba(0,0,0,0.4);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .section { flex-direction: column !important; text-align: center; }
+    .section img, .section .text { max-width: 100%; }
 }
 </style>
 </head>
 
-<body tabindex="0">
+<body>
 
 <header>
     <nav>
@@ -156,66 +125,68 @@ ul, ol {
     </div>
 </section>
 
+<!-- Alternating Sections -->
 <div class="main">
 
-    <h1>Robot Components & Design</h1>
+    <div class="section">
+        <img src="components.jpg" alt="Robot Components">
+        <div class="text">
+            <h2>Robot Components</h2>
+            <p>Our robot is unique and innovative, as it has undergone countless redesigns and replacements. It consists of:</p>
+            <ul>
+                <li>An arm attached to a servo to elevate balls into the flywheel</li>
+                <li>Hooded shooter and delivery mechanism</li>
+                <li>Two rows of wheels run by a motor and a chain to intake artifacts</li>
+                <li>A ramp for artifacts to roll into the inner transition area</li>
+                <li>An arch to help align artifacts during the transition area</li>
+            </ul>
+        </div>
+    </div>
 
-    <h2>Robot Components</h2>
-    <p>Our robot is unique and innovative, as it has undergone countless redesigns and replacements. Learning from past mistakes, we designed a creative robot that consists of:</p>
-    <ul>
-        <li>An arm attached to a servo to elevate balls into the flywheel</li>
-        <li>Hooded shooter and delivery mechanism</li>
-        <li>Two rows of wheels run by a motor and a chain to intake artifacts</li>
-        <li>A ramp for artifacts to roll into the inner transition area</li>
-        <li>An arch to help align artifacts during the transition area</li>
-    </ul>
-    <p>Regular components include:</p>
-    <ul>
-        <li>6 motors for outtake, intake, and 4 Omni wheels</li>
-        <li>1 big servo</li>
-        <li>Camera for April tags</li>
-        <li>Zip ties for wire management</li>
-        <li>Control hub and expansion hub</li>
-    </ul>
+    <div class="section">
+        <img src="flywheel.jpg" alt="Flywheel">
+        <div class="text">
+            <h2>Flywheel</h2>
+            <p>The 3D-printed hooded shooter, designed in Fusion 360, receives the ball directly from the intake system. Fast scoring is crucial, so we optimized the design for speed and accuracy.</p>
+            <ul>
+                <li><strong>FIRST Version:</strong> Added length for proper shooting angle</li>
+                <li><strong>SECOND Version:</strong> Adjusted proportions, reduced sharp angles</li>
+                <li><strong>THIRD Version (Final):</strong> Optimized angle; hood length for consistent shots</li>
+            </ul>
+        </div>
+    </div>
 
-    <h2>Robot Design - Flywheel</h2>
-    <p>The 3D-printed hooded shooter, designed in Fusion 360, receives the ball directly from the intake system. Fast scoring is crucial, so we optimized the design for speed and accuracy.</p>
-    <h3>Flywheel Improvements:</h3>
-    <ul>
-        <li><strong>FIRST Version:</strong> Added length for proper shooting angle; learned geometry affects trajectory</li>
-        <li><strong>SECOND Version:</strong> Adjusted proportions; reduced sharp angles to prevent strain</li>
-        <li><strong>THIRD Version (Final Iteration):</strong> Optimized angle; hood length set for consistent shots</li>
-    </ul>
-    <div class="image-box">Flywheel CAD Design</div>
+    <div class="section">
+        <img src="intake.jpg" alt="Intake System">
+        <div class="text">
+            <h2>Intake System</h2>
+            <p>The intake system guides balls into the robot. Improvements over time ensured stability, speed, and alignment. Ramp reflects the team colors.</p>
+        </div>
+    </div>
 
-    <h2>Robot Design - Intake System (Ramp & Wheels)</h2>
-    <p>The intake system guides balls smoothly into the robot. Improvements over time ensured stability, speed, and alignment. The ramp reflects the team color palette.</p>
-    <h3>Intake System Improvements:</h3>
-    <ul>
-        <li><strong>FIRST Version:</strong> Adjusted ramp angle; wheels lacked grip</li>
-        <li><strong>SECOND Version:</strong> Strengthened ramp; swapped to better wheels</li>
-        <li><strong>THIRD Version (Final Iteration):</strong> Optimized wheel spacing; extended ramp for consistent feed</li>
-    </ul>
-    <div class="image-box">Ramp First Version</div>
-    <div class="image-box">Ramp Final Version</div>
+    <div class="section">
+        <img src="team_plate.jpg" alt="Team Number Plate">
+        <div class="text">
+            <h2>Team Number Plate</h2>
+            <p>We 3D-printed the team plate to ensure it stays in place during matches. Current version uses Velcro strips.</p>
+        </div>
+    </div>
 
-    <h2>Robot Design - Team Number Plate</h2>
-    <p>We 3D-printed the team plate to ensure it stays in place during matches. Current version uses Velcro strips.</p>
-    <div class="image-box">Team Plate</div>
+    <div class="section">
+        <img src="cad.jpg" alt="CAD Design">
+        <div class="text">
+            <h2>CAD Designs & Build</h2>
+            <p>We progressed from sketches to CAD models to the final physical build. Each iteration refined intake, outtake, and structure for optimal performance.</p>
+        </div>
+    </div>
 
-    <h2>Robot Design Versions</h2>
-    <ul>
-        <li><strong>Hand-drawn sketches:</strong> Brainstorming and concepts, especially intake/outtake systems</li>
-        <li><strong>CAD Designs:</strong> Modeled in 3D to visualize proportions and spacing</li>
-        <li><strong>Final Build:</strong> Physical assembly and refinements based on CAD</li>
-    </ul>
-
-    <h2>Robot Design - CAD Designs</h2>
-    <div class="image-box">Final CAD Design</div>
-
-    <h2>Robot Design - Cable Management</h2>
-    <p>Used zip-ties to manage wires, keeping them away from wheels and moving parts for smooth operation.</p>
-    <div class="image-box">Cable Management</div>
+    <div class="section">
+        <img src="cable.jpg" alt="Cable Management">
+        <div class="text">
+            <h2>Cable Management</h2>
+            <p>Zip-ties keep wires organized and away from wheels and moving parts, ensuring smooth operation.</p>
+        </div>
+    </div>
 
 </div>
 
