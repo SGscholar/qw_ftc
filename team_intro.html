@@ -11,6 +11,7 @@ html, body {
     font-family: Arial, sans-serif;
     background-color: lightblue;
     scroll-behavior: smooth;
+    overflow-x: hidden;   /* kills side scrollbar */
 }
 
 /* Header */
@@ -38,6 +39,7 @@ nav a {
 /* Content wrapper */
 .main {
     padding-top: 70px;
+    overflow: visible;   /* ensure only body scrolls */
 }
 
 /* Sections */
