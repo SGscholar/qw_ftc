@@ -55,6 +55,7 @@ nav a {
     box-sizing: border-box;
     flex-direction: column;
     position: relative;
+    transition: opacity 0.5s;
 }
 
 /* Typing animation */
@@ -100,6 +101,7 @@ h1 {
     opacity: 0;
     animation: fadeBottom 2s forwards;
     animation-delay: 4.5s; /* after typing + fade-in paragraphs */
+    transition: opacity 0.5s;
 }
 
 @keyframes fadeBottom {
@@ -163,19 +165,11 @@ td {
 </header>
 
 <!-- Centered Intro Section -->
-<section class="intro-section">
+<section class="intro-section" id="introSection">
     <h1>Outreach</h1>
-    <p class="fade-in">
-        We as a team have gained over <strong>200+ hours of outreach</strong> through hosting information
-        sessions, workshops, Intro To Robotics meetings, and mock tournaments for FLL.
-        We also donated old FLL boards to new teams in our community and helped create
-        new teams through these meetings and the support of our coaches.
-    </p>
-    <p class="fade-in">
-        Our team always strives to help others access this wonderful program, and we
-        look forward to doing so every season.
-    </p>
-    <div class="bottom-text">Full details below</div>
+    <p class="fade-in">We as a team have gained over <strong>200+ hours of outreach</strong> through hosting information sessions, workshops, Intro To Robotics meetings, and mock tournaments for FLL. We also donated old FLL boards to new teams in our community and helped create new teams through these meetings and the support of our coaches.</p>
+    <p class="fade-in">Our team always strives to help others access this wonderful program, and we look forward to doing so every season.</p>
+    <div class="bottom-text" id="bottomText">Full details below</div>
 </section>
 
 <!-- Table Section -->
@@ -191,67 +185,63 @@ td {
         <tr>
             <td>Reston Regional Library – Intro To Robotics (multiple times)</td>
             <td>30+ Hours</td>
-            <td>
-                We gathered at the Reston Regional Library to conduct our Intro to Robotics
-                presentation to new and interested children. We covered the different levels
-                inside FLL and the steps required to form a new team.
-            </td>
+            <td>We gathered at the Reston Regional Library to conduct our Intro to Robotics presentation to new and interested children. We covered the different levels inside FLL and the steps required to form a new team.</td>
             <td><div class="image-box">Image</div></td>
         </tr>
 
         <tr>
             <td>Reston Regional Library – Information Session (multiple times)</td>
             <td>20+ Hours</td>
-            <td>
-                We hosted information sessions covering surface-level details about the
-                different FLL levels and FTC to help families understand the program.
-            </td>
+            <td>We hosted information sessions covering surface-level details about the different FLL levels and FTC to help families understand the program.</td>
             <td><div class="image-box">Image</div></td>
         </tr>
 
         <tr>
             <td>Reston Regional Library – Workshop (multiple times)</td>
             <td>30+ Hours</td>
-            <td>
-                We set up old FLL mats and season-specific game missions to give children
-                hands-on experience with robotics challenges.
-            </td>
+            <td>We set up old FLL mats and season-specific game missions to give children hands-on experience with robotics challenges.</td>
             <td><div class="image-box">Image</div></td>
         </tr>
 
         <tr>
             <td>McNair Upper Elementary School – Robotics Info Session / Workshop (multiple times)</td>
             <td>30+ Hours</td>
-            <td>
-                Similar to our library sessions, we hosted robotics information sessions
-                and workshops for students at McNair Upper Elementary School.
-            </td>
+            <td>Similar to our library sessions, we hosted robotics information sessions and workshops for students at McNair Upper Elementary School.</td>
             <td><div class="image-box">Image</div></td>
         </tr>
 
         <tr>
             <td>McNair Lower Elementary School – FLL Mock Tournament (multiple times)</td>
             <td>30+ Hours</td>
-            <td>
-                We hosted FLL mock tournaments (e.g., 2022–2023 Superpowered), helping
-                local teams prepare and giving us insight into the judging and scoring process.
-            </td>
+            <td>We hosted FLL mock tournaments (e.g., 2022–2023 Superpowered), helping local teams prepare and giving us insight into the judging and scoring process.</td>
             <td><div class="image-box">Image</div></td>
         </tr>
 
         <tr>
             <td>Best Runner’s Outreach Information Session and Demonstration</td>
             <td>5+ Hours</td>
-            <td>
-                As an annual outreach event, we partnered with Best Runner’s Family 1K/5K.
-                We educated participants about FIRST programs through posters and hands-on
-                FLL demonstrations.
-            </td>
+            <td>As an annual outreach event, we partnered with Best Runner’s Family 1K/5K. We educated participants about FIRST programs through posters and hands-on FLL demonstrations.</td>
             <td><div class="image-box">Image</div></td>
         </tr>
 
     </table>
 </section>
+
+<script>
+const introSection = document.getElementById('introSection');
+const bottomText = document.getElementById('bottomText');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if(scrollY > 10) { // fade out after small scroll
+        introSection.style.opacity = '0';
+        bottomText.style.opacity = '0';
+    } else {
+        introSection.style.opacity = '1';
+        bottomText.style.opacity = '1';
+    }
+});
+</script>
 
 </body>
 </html>
