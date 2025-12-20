@@ -39,22 +39,22 @@ nav a {
     font-weight: bold;
 }
 
-/* Hero video */
+/* Hero Image Section */
 .hero {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.hero video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
+
+.hero img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    pointer-events: none;
 }
+
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -63,6 +63,7 @@ nav a {
     justify-content: center;
     align-items: center;
 }
+
 .hero-overlay h1 {
     color: white;
     font-size: 64px;
@@ -115,11 +116,9 @@ nav a {
     </nav>
 </header>
 
-<!-- Hero Video Section -->
+<!-- Hero Image Section -->
 <section class="hero">
-    <video autoplay muted loop playsinline>
-        <source src="robot-hero-video.mp4" type="video/mp4">
-    </video>
+    <img src="robot-hero.jpg" alt="Robot Hero">
     <div class="hero-overlay">
         <h1>Our Robot</h1>
     </div>
