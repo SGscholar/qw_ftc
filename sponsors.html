@@ -79,6 +79,20 @@ ul { margin-left: 20px; }
     gap: 20px;
     flex-wrap: wrap;
 }
+.sponsor-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap; /* prevent inconsistent wrapping */
+}
+.sponsor-card img {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+}
+.sponsor-card .text {
+    flex: 1; /* take remaining space */
+}
 .sponsor-card img {
     width: 120px;
     height: 120px;
