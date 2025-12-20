@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sponsors</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    color: #111;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar { display: none; }
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Main content */
+.main {
+    padding-top: 100px;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 80px;
+}
+
+/* Headings and paragraphs */
+h1, h2 {
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+h2 {
+    font-size: 32px;
+    margin-top: 40px;
+}
+p, ul {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+ul { margin-left: 20px; }
+
+/* Sponsor cards */
+.sponsor-card {
+    background: rgba(255,255,255,0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.sponsor-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.sponsor-card .text {
+    max-width: calc(100% - 140px);
+}
+
+/* Tier table */
+.tier-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background: rgba(255,255,255,0.7);
+}
+.tier-table th, .tier-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    font-size: 16px;
+}
+.tier-table th { text-align: left; font-size: 18px; }
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="#">Current Work</a>
+        <a href="outreach.html">Outreach</a>
+        <a href="robots.html">Robot</a>
+        <a href="#">Sponsors</a>
+    </nav>
+</header>
+
+<div class="main">
+    <h1>Our Sponsors</h1>
+
+    <p>We are grateful for the sponsorships we received. We have 4 sponsors supporting our team, helping us with funds to continue improving and getting new materials needed for each FTC season.</p>
+
+    <p>Additionally, we have implemented a sponsorship tier system, where the sponsor’s tier is based on the amount they donated to our team. It also includes added benefits, like their logo being on our team t-shirts and robot, spreading the word about our wonderful sponsors.</p>
+
+    <h2>Sponsorship Tier System</h2>
+    <table class="tier-table">
+        <tr>
+            <th>Tier</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td>Platinum</td>
+            <td>$1,000+</td>
+        </tr>
+        <tr>
+            <td>Gold</td>
+            <td>$500 - $999</td>
+        </tr>
+        <tr>
+            <td>Silver</td>
+            <td>$250 - $499</td>
+        </tr>
+        <tr>
+            <td>Bronze</td>
+            <td>$100 - $249</td>
+        </tr>
+    </table>
+
+    <h2>Our Sponsors</h2>
+
+    <div class="sponsor-card">
+        <img src="ray-logo.png" alt="RAY">
+        <div class="text">
+            <h3>RAY</h3>
+            <p>RAY is a non-profit organization founded by our mentors from a previous FTC team, the Bionic Enforcers. They provide young kids opportunities to learn robotics and have helped cover many of our team costs.</p>
+        </div>
+    </div>
+
+    <div class="sponsor-card">
+        <img src="gobilda-logo.png" alt="GoBilda">
+        <div class="text">
+            <h3>GoBilda</h3>
+            <p>GoBilda creates starter kits for robots. Their starter kit helped us kick off our FTC journey and build our first robot.</p>
+        </div>
+    </div>
+
+    <div class="sponsor-card">
+        <img src="swartek-logo.png" alt="Swartek">
+        <div class="text">
+            <h3>Swartek</h3>
+            <p>Swartek is a tech company specializing in Data & AI, Analytics, and Cloud Solutions. They provided $500 for our team, which we used to create new team t-shirts.</p>
+        </div>
+    </div>
+
+    <div class="sponsor-card">
+        <img src="polymaker-logo.png" alt="Polymaker">
+        <div class="text">
+            <h3>Polymaker</h3>
+            <p>Polymaker develops 3D printing materials. They provided $200 worth of filament, helping us create 3D pieces for our robot.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
